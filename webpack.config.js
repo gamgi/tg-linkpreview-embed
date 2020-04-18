@@ -17,6 +17,11 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.(glsl|vs|fs)$/,
+        use: 'ts-shader-loader',
+        include: [path.resolve(__dirname, 'src/shader')],
+      },
+      {
         test: /\.(png|jpg)$/i,
         use: 'file-loader',
         include: [path.resolve(__dirname, 'src/assets')],
