@@ -1,22 +1,30 @@
-import '../style.css';
-
-function getCanvas(): HTMLCanvasElement {
-  return document.getElementsByTagName('canvas')[0];
-}
 
 function main(): void {
-  // eslint-disable-next-line no-console
-  console.log('running');
   const canvas = getCanvas();
   const gl = canvas.getContext('webgl2');
 
   if (gl === null) {
-    // eslint-disable-next-line no-console
-    console.error('Unable to initialize WebGL. Your browser or machine may not support it.');
-    return;
+    throw new Error('Unable to initialize WebGL. Your browser or machine may not support it.');
   }
 
-  document.querySelector('#loading-container').classList.add('hidden');
+}
+function getCanvas(): HTMLCanvasElement {
+  const container = document.querySelector('#canvas-container');
+  const element: HTMLCanvasElement = document.createElement('canvas');
+  element.width = 640;
+  element.height = 480;
+  container.appendChild(element);
+  return element;
+}
+
+function setLoading(loading: boolean): void {
+  if (loading) {
+    document.querySelector('#loading-container').classList.remove('hidden');
+  } else {
+    document.querySelector('#loading-container').classList.add('hidden');
+  }
+}
+
 }
 
 window.onload = main;

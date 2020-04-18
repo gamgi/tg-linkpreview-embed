@@ -7,21 +7,15 @@ html, body {
 body {
     display: flex;
 }
-.webgl {
+#canvas-container {
     display: flex;
     position: relative;
-    width: 640px;
-    height: 480px;
-}
-.webgl canvas {
-    width: 640px;
-    height: 480px;
 }
 #loading-container {
     position: absolute;
-    width: 640px;
-    height: 480px;
     display: flex;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     background: url('src/assets/background.png') no-repeat center center;
     background-size: cover;
