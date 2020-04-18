@@ -17,13 +17,9 @@ function main(): void {
   setLoading(false);
   renderLoop(gl, programInfo, buffers);
 }
+
 function getCanvas(): HTMLCanvasElement {
-  const container = document.querySelector('#canvas-container');
-  const element: HTMLCanvasElement = document.createElement('canvas');
-  element.width = 640;
-  element.height = 480;
-  container.appendChild(element);
-  return element;
+  return document.querySelector('#canvas');
 }
 
 function setLoading(loading: boolean): void {
