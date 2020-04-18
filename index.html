@@ -8,18 +8,18 @@
     <meta property="twitter:title" content="<%= htmlWebpackPlugin.options.title %>">
     <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
     <meta property="og:type" content="video.other">
-    <meta property="twitter:image" content="<%= htmlWebpackPlugin.options.socialImage %>">
-    <meta property="og:image" content="<%= htmlWebpackPlugin.options.socialImage %>">
-    <!-- <meta property="og:image:width" content="320"> -->
-    <!-- <meta property="og:image:height" content="180"> -->
-    <!-- <link rel="alternate" type="application/json+oembed" href="" title=""> -->
-    <meta property="og:url" content="<%= htmlWebpackPlugin.options.url %>">
+    <meta property="twitter:image" content="<%= htmlWebpackPlugin.options.thumbnailURL%>">
+    <meta property="og:image" content="<%= htmlWebpackPlugin.options.thumbnailURL%>">
+    <meta property="og:image:width" content="<%= htmlWebpackPlugin.options.thumbnailWidth%>">
+    <meta property="og:image:height" content="<%= htmlWebpackPlugin.options.thumbnailHeight%>">
+    <link rel="alternate" type="application/json+oembed" href="<%= htmlWebpackPlugin.options.URL %>oembed.json" title="<%= htmlWebpackPlugin.options.title %>">
+    <meta property="og:url" content="<%= htmlWebpackPlugin.options.URL %>">
     <meta property="og:video:type" content="text/html">
-    <meta property="og:video:url" content="<%= htmlWebpackPlugin.options.url %>">
-    <meta property="og:video:secure_url" content="<%= htmlWebpackPlugin.options.url %>">
+    <meta property="og:video:url" content="<%= htmlWebpackPlugin.options.URL %>">
+    <meta property="og:video:secure_url" content="<%= htmlWebpackPlugin.options.URL %>">
     <meta property="og:video:width" content="<%= htmlWebpackPlugin.options.canvasWidth%>">
     <meta property="og:video:height" content="<%= htmlWebpackPlugin.options.canvasHeight%>">
-    <meta name="twitter:player" content="<%= htmlWebpackPlugin.options.url %>">
+    <meta name="twitter:player" content="<%= htmlWebpackPlugin.options.URL %>">
     <meta name="twitter:player:stream:content_type" content="text/html">
     <meta property="twitter:player:width" content="<%= htmlWebpackPlugin.options.canvasWidth%>">
     <meta property="twitter:player:height" content="<%= htmlWebpackPlugin.options.canvasHeight%>">
