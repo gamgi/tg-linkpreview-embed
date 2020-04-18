@@ -5,7 +5,9 @@ const constants = require('./constants');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.ts',
+  entry:  {
+    main: ['./src/index.ts', './style.css']
+  },
   devtool: 'inline-source-map',
   module: {
     rules: [
