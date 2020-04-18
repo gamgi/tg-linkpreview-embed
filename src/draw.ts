@@ -10,6 +10,9 @@ export function drawScene(
   buffers: Buffers,
   deltaTime: number,
 ): void {
+  resize(gl.canvas as HTMLCanvasElement);
+  gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+
   // clear
   gl.clearDepth(1.0);
   gl.enable(gl.DEPTH_TEST);
@@ -52,6 +55,18 @@ export function drawScene(
     gl.drawElements(gl.TRIANGLES, vertexCount, type, offset);
   }
 
-  // Update rotation
+  // update rotation
   rotation += deltaTime;
+}
+
+function resize(canvas: HTMLCanvasElement): void {
+  // check browser canvas size
+  const displayWidth = canvas.clientWidth;
+  const displayHeight = canvas.clientHeight;
+
+  if (canvas.width !== displayWidth || canvas.height !== displayHeight) {
+    // resize
+    canvas.width = displayWidth;
+    canvas.height = displayHeight;
+  }
 }
