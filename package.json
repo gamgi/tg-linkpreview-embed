@@ -5,8 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server",
-    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}'"
+    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}'",
+    "build": "webpack --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -27,6 +28,7 @@
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
   }
 }

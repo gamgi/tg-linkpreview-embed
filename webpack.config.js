@@ -4,11 +4,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const constants = require('./constants');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry:  {
     main: ['./src/index.ts', './style.css']
   },
-  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -43,10 +42,5 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({...constants}),
     new MiniCssExtractPlugin(),
-  ],
-  devServer: {
-    contentBase: path.join(__dirname, 'docs'),
-    compress: true,
-    port: 9000,
-  },
+  ]
 };
