@@ -1,0 +1,32 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+body {
+    display: flex;
+}
+.webgl {
+    display: flex;
+    position: relative;
+    width: 640px;
+    height: 480px;
+}
+.webgl canvas {
+    width: 640px;
+    height: 480px;
+}
+#loading-container {
+    position: absolute;
+    width: 640px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    background: url('src/assets/background.png') no-repeat center center;
+    background-size: cover;
+    align-items: center;
+}
+#loading-container.hidden {
+    visibility: hidden;
+}

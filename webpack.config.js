@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const constants = require('./constants');
 
 module.exports = {
   mode: 'development',
@@ -33,11 +34,7 @@ module.exports = {
     path: path.resolve(__dirname, 'docs'),
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Telegram Embed Demo',
-      template: 'index.html',
-      url: 'https://gamgi.github.io/tg-linkpreview-embed/'
-    }),
+    new HtmlWebpackPlugin({...constants}),
     new MiniCssExtractPlugin(),
   ],
   devServer: {

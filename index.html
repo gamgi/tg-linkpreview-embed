@@ -1,10 +1,40 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Telegram Embed Demo</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <meta charset="utf-8">
+    <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta property="twitter:card" content="player">
+    <meta property="twitter:title" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
+    <meta property="og:type" content="video.other">
+    <meta property="twitter:image" content="<%= htmlWebpackPlugin.options.socialImage %>">
+    <meta property="og:image" content="<%= htmlWebpackPlugin.options.socialImage %>">
+    <!-- <meta property="og:image:width" content="320"> -->
+    <!-- <meta property="og:image:height" content="180"> -->
+    <!-- <link rel="alternate" type="application/json+oembed" href="" title=""> -->
+    <meta property="og:url" content="<%= htmlWebpackPlugin.options.url %>">
+    <meta property="og:video:type" content="text/html">
+    <meta property="og:video:url" content="<%= htmlWebpackPlugin.options.url %>">
+    <meta property="og:video:secure_url" content="<%= htmlWebpackPlugin.options.url %>">
+    <meta property="og:video:width" content="<%= htmlWebpackPlugin.options.canvasWidth%>">
+    <meta property="og:video:height" content="<%= htmlWebpackPlugin.options.canvasHeight%>">
+    <meta name="twitter:player" content="<%= htmlWebpackPlugin.options.url %>">
+    <meta name="twitter:player:stream:content_type" content="text/html">
+    <meta property="twitter:player:width" content="<%= htmlWebpackPlugin.options.canvasWidth%>">
+    <meta property="twitter:player:height" content="<%= htmlWebpackPlugin.options.canvasHeight%>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
   </head>
   <body>
-    Example
+    <div class="webgl">
+      <canvas></canvas>
+      <div id="loading-container">
+        <div>Loading</div>
+      </div>
+    </div>
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+      <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+    <% } %>
   </body>
 </html>
