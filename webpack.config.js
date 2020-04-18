@@ -41,7 +41,7 @@ module.exports = {
     path: path.resolve(__dirname, 'docs'),
   },
   plugins: [
-    new HtmlWebpackPlugin({...constants}),
+    new HtmlWebpackPlugin({...constants, minify: false}),
     new MiniCssExtractPlugin(),
     new CopyPlugin([
       { from: './src/assets/placeholder.png', to: constants.thumbnail },
