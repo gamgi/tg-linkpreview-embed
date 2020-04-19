@@ -44,7 +44,7 @@ module.exports = {
     new HtmlWebpackPlugin({...constants, minify: false}),
     new MiniCssExtractPlugin(),
     new CopyPlugin([
-      { from: './src/assets/placeholder.png', to: constants.thumbnail },
+      { from: './src/assets/thumbnail.png', to: constants.thumbnail },
       { from: "oembed.json", to: "oembed.json", transform: populateJson }
     ])
   ]
