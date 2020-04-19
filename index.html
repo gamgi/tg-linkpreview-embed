@@ -10,26 +10,42 @@
     <meta property="twitter:title" content="<%= htmlWebpackPlugin.options.title %>">
     <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>">
     <meta property="og:type" content="video.other">
+    <meta property="twitter:description" content="<%= htmlWebpackPlugin.options.description %>">
+    <meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>">
     <meta property="twitter:image" content="<%= htmlWebpackPlugin.options.thumbnailURL%>">
     <meta property="og:image" content="<%= htmlWebpackPlugin.options.thumbnailURL%>">
-    <meta property="og:image:width" content="<%= htmlWebpackPlugin.options.thumbnailWidth%>">
-    <meta property="og:image:height" content="<%= htmlWebpackPlugin.options.thumbnailHeight%>">
+    <meta property="og:image:width" content="<%= htmlWebpackPlugin.options.thumbnailWidth %>">
+    <meta property="og:image:height" content="<%= htmlWebpackPlugin.options.thumbnailHeight %>">
     <link rel="alternate" type="application/json+oembed" href="<%= htmlWebpackPlugin.options.URL %>oembed.json" title="<%= htmlWebpackPlugin.options.title %>">
     <meta property="og:url" content="<%= htmlWebpackPlugin.options.URL %>">
     <meta property="og:video:type" content="text/html">
     <meta property="og:video:url" content="<%= htmlWebpackPlugin.options.URL %>">
     <meta property="og:video:secure_url" content="<%= htmlWebpackPlugin.options.URL %>">
-    <meta property="og:video:width" content="<%= htmlWebpackPlugin.options.canvasWidth%>">
-    <meta property="og:video:height" content="<%= htmlWebpackPlugin.options.canvasHeight%>">
+    <meta property="og:video:width" content="<%= htmlWebpackPlugin.options.canvasWidth %>">
+    <meta property="og:video:height" content="<%= htmlWebpackPlugin.options.canvasHeight %>">
     <meta name="twitter:player" content="<%= htmlWebpackPlugin.options.URL %>">
     <meta name="twitter:player:stream:content_type" content="text/html">
-    <meta name="twitter:player:width" content="<%= htmlWebpackPlugin.options.canvasWidth%>">
-    <meta name="twitter:player:height" content="<%= htmlWebpackPlugin.options.canvasHeight%>">
+    <meta name="twitter:player:width" content="<%= htmlWebpackPlugin.options.canvasWidth %>">
+    <meta name="twitter:player:height" content="<%= htmlWebpackPlugin.options.canvasHeight %>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "<%= htmlWebpackPlugin.options.URL %>",
+        "name": "<%= htmlWebpackPlugin.options.description %>",
+        "mainEntityOfPage": {
+            "@type": "3Dmodel"
+        },
+        "description": "<%= htmlWebpackPlugin.options.description %>",
+        "embedUrl": "<%= htmlWebpackPlugin.options.URL %>"
+      }
+  </script>
   </head>
   <body>
-    <div id="canvas-container" class="canvas-size webgl">
+    <div id="canvas-container" class="canvas-size content" itemprop="mainEntity" itemscope itemtype="http://schema.org/3DModel">
+
       <canvas id="canvas"> </canvas>
       <div id="loading-container" class="canvas-size">
         <div>Loading</div>

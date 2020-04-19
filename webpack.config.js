@@ -56,6 +56,9 @@ function populateJson(buffer, path) {
   // oEmbed format
   // https://oembed.com/
   data.title = constants.title;
+  data.description = constants.description;
+  data.author_name = constants.authorName;
+  data.author_url = constants.authorUrl;
   data.width = constants.canvasWidth;
   data.height = constants.canvasHeight;
   data.thumbnail_url = constants.thumbnailURL;
