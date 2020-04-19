@@ -17,13 +17,13 @@
     <meta property="og:image:width" content="<%= htmlWebpackPlugin.options.thumbnailWidth %>">
     <meta property="og:image:height" content="<%= htmlWebpackPlugin.options.thumbnailHeight %>">
     <link rel="alternate" type="application/json+oembed" href="<%= htmlWebpackPlugin.options.URL %>oembed.json" title="<%= htmlWebpackPlugin.options.title %>">
-    <meta property="og:url" content="<%= htmlWebpackPlugin.options.URL %>">
+    <meta property="og:url" content="<%= htmlWebpackPlugin.options.URL %>?embed=1">
     <meta property="og:video:type" content="text/html">
-    <meta property="og:video:url" content="<%= htmlWebpackPlugin.options.URL %>">
-    <meta property="og:video:secure_url" content="<%= htmlWebpackPlugin.options.URL %>">
+    <meta property="og:video:url" content="<%= htmlWebpackPlugin.options.URL %>?embed=1">
+    <meta property="og:video:secure_url" content="<%= htmlWebpackPlugin.options.URL %>?embed=1">
     <meta property="og:video:width" content="<%= htmlWebpackPlugin.options.canvasWidth %>">
     <meta property="og:video:height" content="<%= htmlWebpackPlugin.options.canvasHeight %>">
-    <meta name="twitter:player" content="<%= htmlWebpackPlugin.options.URL %>">
+    <meta name="twitter:player" content="<%= htmlWebpackPlugin.options.URL %>?embed=1">
     <meta name="twitter:player:stream:content_type" content="text/html">
     <meta name="twitter:player:width" content="<%= htmlWebpackPlugin.options.canvasWidth %>">
     <meta name="twitter:player:height" content="<%= htmlWebpackPlugin.options.canvasHeight %>">
@@ -39,7 +39,7 @@
             "@type": "3Dmodel"
         },
         "description": "<%= htmlWebpackPlugin.options.description %>",
-        "embedUrl": "<%= htmlWebpackPlugin.options.URL %>"
+        "embedUrl": "<%= htmlWebpackPlugin.options.URL %>?embed=1"
       }
   </script>
   </head>

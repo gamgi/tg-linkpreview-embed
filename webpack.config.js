@@ -64,7 +64,7 @@ function populateJson(buffer, path) {
   data.thumbnail_url = constants.thumbnailURL;
   data.thumbnail_width = constants.thumbnailWidth;
   data.thumbnail_height = constants.thumbnailHeight;
-  data.html = `<div class="tg-embed-wrapper">\n<iframe allowvr="" title="" webkitallowfullscreen="true" width="${constants.canvasWidth}" src="${constants.URL}" class="" allow="autoplay; fullscreen; vr" frameborder="0" mozallowfullscreen="true" height="${constants.canvasHeight}" onmousewheel="" allowfullscreen=""></iframe></div>`;
+  data.html = `<iframe allowvr="" title="" webkitallowfullscreen="true" width="${constants.canvasWidth}" src="${constants.URL}?embed=1" class="" allow="autoplay; fullscreen; vr" frameborder="0" mozallowfullscreen="true" height="${constants.canvasHeight}" onmousewheel="" allowfullscreen=""></iframe>`;
 
   dataJSON = JSON.stringify(data, null, 2);
   return dataJSON;
