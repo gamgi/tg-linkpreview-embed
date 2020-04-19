@@ -1,0 +1,36 @@
+html, body {
+    width:100%;
+    min-height:100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+body {
+    display: flex;
+}
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#canvas-container canvas {
+    width: 100vw;
+    height: 100vh;
+    background: url(a451698210fc5bfd56b0e52dcc011b99.png) no-repeat center center;
+    background-size: cover;
+}
+#loading-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: url(a451698210fc5bfd56b0e52dcc011b99.png) no-repeat center center;
+    background-size: cover;
+    align-items: center;
+}
+#loading-container.hidden {
+    visibility: hidden;
+}

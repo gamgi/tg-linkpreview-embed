@@ -1,0 +1,15 @@
+{
+  "title": "Telegram Embed Demo",
+  "provider_name": "Github",
+  "provider_url": "https://github.com",
+  "author_name": "Gamgi",
+  "width": 640,
+  "height": 360,
+  "thumbnail_url": "https://gamgi.github.io/tg-linkpreview-embed/thumbnail.png",
+  "thumbnail_width": 720,
+  "thumbnail_height": 405,
+  "type": "rich",
+  "version": "1.0",
+  "html": "<iframe allowvr=\"\" title=\"\" webkitallowfullscreen=\"true\" width=\"640\" src=\"https://gamgi.github.io/tg-linkpreview-embed/?embed=1\" class=\"\" allow=\"autoplay; fullscreen; vr\" frameborder=\"0\" mozallowfullscreen=\"true\" height=\"360\" onmousewheel=\"\" allowfullscreen=\"\"></iframe>",
+  "description": "Example of embed metadata for allowing in-app preview."
+}
